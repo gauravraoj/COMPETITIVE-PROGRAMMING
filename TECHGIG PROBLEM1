@@ -1,0 +1,35 @@
+/* Read input from STDIN. Print your output to STDOUT*/
+#include<stdio.h>
+int main(int argc, char *a[])
+{
+	int h,b,c,d,res=0,res1=0,temp,res2=0,res3=0,res4=0;
+	scanf("%d %d",&h,&b);
+	scanf("%d %d",&c,&d);
+	if(b>=0&&b<=59)
+	{
+	res=b+d;
+	if(res>=60)
+	{
+		res1++;
+		res3=res-60;
+	}
+	else
+	{
+		res3=res;
+	}
+	}
+	if(h>=0&&h<=23)
+	{
+	  res2=res1+h+c;
+	  if(res2>=24)
+	 {
+		 res4=res2-24;
+	 }
+	 else
+	 {
+		res4=res2;
+	 }
+	}
+	printf("%d %d",res4,res3);
+}
+
